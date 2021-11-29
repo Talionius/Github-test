@@ -1,18 +1,12 @@
 
 from tkinter import *
 from tkinter import ttk
-# variables
 ay = 'ay'
 way = 'way'
 consonant = ('B','C','D','F','G','H','J','K','L','M','N','P','Q','R','S','T','Y','V','X','Z')
 vowel = ('A','E','I','O','U')
-
-# creates Tkinter window
 root = Tk()
-# creates window title
-root.title('Sam Pig Latin Translator')
-# stops the window being resized
-root.resizable(0,0)
+root.title('Pig Latin Translator')
 
 root.frame_box = ttk.Frame()
 ttk.Label(root.frame_box,text = 'Pig Latin Translator', style = 'Header.TLabel').grid(row = 0, columnspan = 4)
@@ -25,7 +19,6 @@ text_entry.grid(row=3,column=1)
 translated_text = ttk.Entry(root.frame_box, width=50)
 translated_text.grid(row=4,column=1)
 
-#functions
 def translate_text():
     pig_latin_string =''
     user_sentence = text_entry.get()
